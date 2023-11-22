@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cont{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  margin: 0 10px;
+}
+
+ul{
+  display: flex;
+  list-style: none;
+
+}
+
+li{
+  margin: 0 2rem;
+}
+
+.cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+    margin: 0 10px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.cont .nav-items ul{
+    display: flex;
+    list-style: none;
+}
+
+.logo{
+    color: white;
+}
+
+li{
+    margin: 0 3rem;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    
+}
+
+
+
