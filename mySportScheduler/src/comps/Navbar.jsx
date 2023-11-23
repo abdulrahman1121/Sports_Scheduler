@@ -10,21 +10,17 @@ export const Navbar = () => {
         <nav className="nav-items">
           <ul>
             <li><Link to={'Content'}>home</Link></li>
-            <li>
-            <Link to={'NBA'}>NBA</Link>
-            </li>
-            <li>
-              <a href="#">NFL</a>
-            </li>
-            <li>
-              <a href="#">MLB</a>
-            </li>
-            <li>
-              <a href="#">Soccer</a>
-            </li>
-            <li>
-              <a href="#">NHL</a>
-            </li>
+
+            <li><Link to={'NBA'}>NBA</Link></li>
+            
+            <li><Link to={'NFL'}>NFL</Link></li>
+
+            <li><Link to={'MLB'}>MLB</Link></li>
+            
+            <li><Link to={'Soccer'}>Soccer</Link></li>
+            
+            <li><Link to={'NHL'}>NHL</Link></li>
+
           </ul>
         </nav>
       </div>
