@@ -5,7 +5,7 @@ export const Navbar = () => {
     <>
       <div className="cont">
         <div className="logo">
-          <h2>LiveSync</h2>
+          <h2 >LiveSync</h2>
         </div>
         <nav className="nav-items">
           <ul>

@@ -1,15 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.cont {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 10vh;
-  margin: 0 10px;
+  font-family: 'Barlow', sans-serif;
 }
 
 ul {
@@ -26,9 +21,14 @@ li {
   justify-content: space-between;
   align-items: center;
   min-height: 10vh;
-  margin: 0 10px;
-  background-color: black;
-  border-radius: 10px;
+
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border-radius: 3px;
 }
 
 .cont .nav-items ul {
@@ -36,8 +36,9 @@ li {
   list-style: none;
 }
 
-.logo {
+.logo h2 {
   color: white;
+  font-family: 'Barlow', sans-serif;
 }
 
 li {
@@ -54,16 +55,15 @@ a {
   display: flex;
   justify-content: center;
 }
-h2{
-  margin:  2rem 1rem;
-  font-family: F1,sans-serif;
+h2 {
+  margin: 2rem 1rem;
+  font-family: F1, sans-serif;
 }
 
-button{
-  margin:  2rem 1rem;
-  font-family: F1,sans-serif;
+button {
+  margin: 2rem 1rem;
+  font-family: F1, sans-serif;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-
 }
