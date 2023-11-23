@@ -11,7 +11,7 @@ export const Navbar = () => {
           <ul>
             <li><Link to={'Content'}>home</Link></li>
             <li>
-              <a href="#">NBA</a>
+            <Link to={'NBA'}>NBA</Link>
             </li>
             <li>
               <a href="#">NFL</a>

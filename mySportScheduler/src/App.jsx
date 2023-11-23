@@ -6,6 +6,7 @@ import Navbar from "./comps/Navbar";
 import Content from "./comps/Content";
 import LiveGames from "./comps/Livegames";
 import Upcoming from "./comps/Upcoming";
+import NBA from './comps/NBA';
 import { Routes, Route, Navigate } from "react-router-dom";
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/Livegames" element= {<LiveGames/>}></Route>
         <Route path="/Content" element= {<Content/>}></Route>
         <Route path="/Upcoming" element= {<Upcoming/>}></Route>
+        <Route path="/NBA" element= {<NBA/>}></Route>
       </Routes>
     </>
   );
