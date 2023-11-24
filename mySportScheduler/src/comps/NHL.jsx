@@ -1,4 +1,5 @@
 import React from 'react';
+import NHLpic from '../images/NHL.jpg'
 
 const NHL = () => {
     return (

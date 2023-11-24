@@ -1,4 +1,5 @@
 import React from 'react';
+import Soccerpic from '../images/Soccer.jpg';
 
 const Soccer = () => {
     return (

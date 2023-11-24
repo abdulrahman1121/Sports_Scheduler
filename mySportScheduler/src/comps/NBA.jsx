@@ -1,9 +1,11 @@
 import React from 'react';
+import NBApic from '../images/NBA.JPG';
 
 const NBA = () => {
     return (
         <div>
-            <h1>This is the NBA page</h1>
+            <h3>This is NBA page</h3>
+            
         </div>
     );
 }
