@@ -5,6 +5,7 @@ const NFL = () => {
     return (
         <div>
             <h1>This is NFL page</h1>
+            <img src={NFLpic} alt="" />
         </div>
     );
 }

@@ -5,6 +5,7 @@ const Soccer = () => {
     return (
         <div>
         <h1>This is Soccer page</h1>
+        <img src={Soccerpic} alt="" />
         </div>
     );
 }

@@ -4,7 +4,8 @@ import NBApic from '../images/NBA.JPG';
 const NBA = () => {
     return (
         <div>
-            <h3>This is NBA page</h3>
+            <h1>This is NBA page</h1>
+            <img src={NBApic} alt="" />
             
         </div>
     );

@@ -5,6 +5,7 @@ const NHL = () => {
     return (
         <div>
             <h1>This is NHL page</h1>
+            <img src={NHLpic} alt="" />
         </div>
     );
 }
