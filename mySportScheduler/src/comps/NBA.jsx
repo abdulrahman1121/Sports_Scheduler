@@ -1,5 +1,5 @@
 import React from "react";
-import NBApic from "../images/NBA.JPG";
+import NBApic from "../images/NBA.jpg";
 
 const NBA = () => {
   const divStyle = {
@@ -11,7 +11,7 @@ const NBA = () => {
   };
   return (
     <div style={divStyle}>
-      <h1>This is NBA page</h1>
+      
     </div>
   );
 };

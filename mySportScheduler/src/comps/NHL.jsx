@@ -2,10 +2,16 @@ import React from 'react';
 import NHLpic from '../images/NHL.jpg'
 
 const NHL = () => {
-    return (
-        <div>
-            <h1>This is NHL page</h1>
-            <img src={NHLpic} alt="" />
+    const divStyle = {
+        backgroundImage: ` url(${NHLpic}) `,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        width: "100%",
+        height: "900px",
+      };
+      return (
+        <div style={divStyle}>
+            
         </div>
     );
 }
