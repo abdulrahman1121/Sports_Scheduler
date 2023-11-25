@@ -1,14 +1,19 @@
-import React from 'react';
-import NBApic from '../images/NBA.JPG';
+import React from "react";
+import NBApic from "../images/NBA.JPG";
 
 const NBA = () => {
-    return (
-        <div>
-            <h1>This is NBA page</h1>
-            <img src={NBApic} alt="" />
-            
-        </div>
-    );
-}
+  const divStyle = {
+    backgroundImage: ` url(${NBApic}) `,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    width: "100%",
+    height: "900px",
+  };
+  return (
+    <div style={divStyle}>
+      <h1>This is NBA page</h1>
+    </div>
+  );
+};
 
 export default NBA;
