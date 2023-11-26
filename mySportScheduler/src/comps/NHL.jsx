@@ -11,27 +11,29 @@ const NHL = () => {
       };
 
       
-  const boxStyle = {
-    width: "200px",
-    height: "200px",
-    backgroundColor: "lightblue",
-    border: "2px solid blue",
-    borderRadius: "8px",
-    textAlign: "center",
-    paddingTop: "20px",
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
+    const boxStyle = {
+        width: "300px",
+        height: "300px",
+        backgroundColor: "lightblue",
+        border: "2px solid blue",
+        borderRadius: "5px",
+        textAlign: "center",
+        paddingTop: "20px",
+        position: "absolute",
+        top: "75%",
+        left: "50%",
+        transform: "translate(-50%, -75%)",
   };
-      return (
-        <div style={divStyle}>
-
-        <div style={boxStyle}>
+    return (
+    <div style={divStyle}>
+        <h3>NHL</h3>
+        
+    <div style={boxStyle}>
         <p>This is a div box</p>
       
       </div>
-      </div>
+    </div>
+    
     );
 }
 

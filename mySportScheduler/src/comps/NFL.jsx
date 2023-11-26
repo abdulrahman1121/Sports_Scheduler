@@ -9,10 +9,31 @@ const NFL = () => {
         width: "100%",
         height: "900px",
       };
-      return (
-        <div style={divStyle}>
-            
+      
+    const boxStyle = {
+        width: "300px",
+        height: "300px",
+        backgroundColor: "lightblue",
+        border: "2px solid blue",
+        borderRadius: "5px",
+        textAlign: "center",
+        paddingTop: "20px",
+        position: "absolute",
+        top: "75%",
+        left: "50%",
+        transform: "translate(-50%, -75%)",
+      };
+    
+    return (
+    <div style={divStyle}>
+        <h3>NFL</h3>
+
+    <div style={boxStyle}>
+        <p>This is a div box</p>
+          
         </div>
+    </div>
+
     );
 }
 
