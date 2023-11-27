@@ -1,6 +1,7 @@
 import React from "react";
 import NBApic from "../images/NBA2.jpg";
-
+import { useState, useEffect } from "react";
+// const [nabInfo,setNbaInfoo] = useState([])
 const NBA = () => {
     const divStyle = {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${NBApic})`,
@@ -37,6 +38,14 @@ const NBA = () => {
         left: "50%",
         transform: "translate(150%, -150%)",
   };
+  useEffect(() => {
+    const fetchNba = async () => {
+      const res = await fetch('http://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard')
+      const data = await res.json()
+      console.log(data)
+    };
+    fetchNba();
+  }, []);
       return (
       <div style={divStyle}>
           <h3>NHL</h3>
