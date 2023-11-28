@@ -1,7 +1,7 @@
 import React from "react";
 import NBApic from "../images/NBA2.jpg";
 import { useState, useEffect } from "react";
-// const [nabInfo,setNbaInfoo] = useState([])
+// const [nbaInfo, setNbaInfoo] = useState([])
 const NBA = () => {
     const divStyle = {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${NBApic})`,
