@@ -4,10 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
 }
-
-
 
 ul {
   display: flex;
@@ -35,7 +33,7 @@ li {
 
 .logo h2 {
   color: white;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 
 li {
@@ -66,7 +64,27 @@ button {
   cursor: pointer;
 }
 
-h3{
+h3 {
   color: white;
   text-align: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+background-color: rgb(68, 66, 66);
+}
+
+.boxStyle {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  overflow: hidden;
+ 
+}
+
+.logo-nba {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
