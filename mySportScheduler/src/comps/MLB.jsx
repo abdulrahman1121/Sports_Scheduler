@@ -11,7 +11,7 @@ const MLB = () => {
       };
 
     const boxStyle = {
-        width: "300px",
+        width: "400px",
         height: "300px",
         backgroundColor: "lightblue",
         border: "2px solid blue",
@@ -21,13 +21,13 @@ const MLB = () => {
         position: "absolute",
         top: "75%",
         left: "50%",
-        transform: "translate(-50%, -75%)",
+        transform: "translate(-75%, -25%)",
       };
     
       const box2Style = {
         width: "200px",
         height: "200px",
-        backgroundColor: "orange",
+        backgroundColor: "purple",
         border: "2px solid green",
         borderRadius: "5px",
         textAlign: "center",
@@ -37,6 +37,15 @@ const MLB = () => {
         left: "50%",
         transform: "translate(150%, -150%)",
   };
+  useEffect(() => {
+    const fetchNba = async () => {
+      const res = await fetch('http://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard')
+      const data = await res.json()
+      console.log(data)
+    };
+    fetchNba();
+  }, []);
+  
       return (
       <div style={divStyle}>
           <h3>NHL</h3>
