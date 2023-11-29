@@ -37,9 +37,10 @@ const NBA = () => {
     };
     fetchNba();
   }, []);
+
   return (
     <div style={divStyle}>
-      <h3>NHL</h3>
+      <h3>NBA</h3>
       <div className="container">
         {nabInfo.map((teams, index) => (
           <div key={index}>

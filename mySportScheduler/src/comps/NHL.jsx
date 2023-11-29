@@ -38,14 +38,7 @@ const NHL = () => {
       left: "50%",
       transform: "translate(150%, -150%)",
 };
-useEffect(() => {
-  const fetchNba = async () => {
-    const res = await fetch('http://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard')
-    const data = await res.json()
-    console.log(data)
-  };
-  fetchNba();
-}, []);
+
 
     return (
     <div style={divStyle}>
