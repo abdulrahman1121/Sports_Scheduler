@@ -3,7 +3,7 @@ import MLBpic from '../images/MLB.jpg';
 import { useState, useEffect } from "react";
 
 const MLB = () => {
-  const [mlbInfo, setmlbInfo] = useState([]);
+  const [mlbInfo, setMlbInfo] = useState([]);
     const divStyle = {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${MLBpic})`,
         backgroundSize: "cover",
@@ -48,7 +48,7 @@ const MLB = () => {
       );
       const data = await res.json();
       if (data.events) {
-        setmlbInfo(data.events);
+        setMlbInfo(data.events);
       }
       console.log(data);
     };

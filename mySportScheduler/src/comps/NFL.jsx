@@ -3,7 +3,7 @@ import NFLpic from '../images/NFL.jpg'
 import { useState, useEffect } from "react";
 
 const NFL = () => {
-  const [nflInfo, setnflInfo] = useState([]);
+  const [nflInfo, setNflInfo] = useState([]);
   const divStyle = {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${NFLpic})`,
     backgroundSize: "cover",
@@ -33,7 +33,7 @@ const NFL = () => {
       );
       const data = await res.json();
       if (data.events) {
-        setnflInfo(data.events);
+        setNflInfo(data.events);
       }
       console.log(data);
     };

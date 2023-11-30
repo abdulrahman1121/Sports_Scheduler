@@ -1,7 +1,8 @@
-import React from 'react';
 import Soccerpic from '../images/Soccer.jpg';
+import {useState, useEffect} from 'react';
 
 const Soccer = () => {
+    const [soccerInfo, setSoccerInfo] = useState([]);
     const divStyle = {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Soccerpic})`,
         backgroundSize: "cover",
@@ -37,22 +38,46 @@ const Soccer = () => {
         left: "50%",
         transform: "translate(150%, -150%)",
     };
+
+    useEffect(() => {
+      const fetchSoccer = async () => {
+        const res = await fetch(
+          "http://site.api.espn.com/apis/site/v2/sports/soccer/:league/scoreboard"
+        );
+        const data = await res.json();
+        if(data.events){
+          setSoccerInfo(data.events);
+        }
+        console.log(data);
+      };
+    fetchSoccer();
+}, [])
+
+    
     
     
         return (
-        <div style={divStyle}>
-            <h3>Soccer</h3>
-            
-        <div style={boxStyle}>
-            <p>This is a div box</p>
-        
-        <div style={box2Style}>
-          <p>This is div for teams</p>
-            </div>
+          <div style={divStyle}>
+          <h3>Soccer</h3>
+          <div className="container">
+            {soccerInfo.map((teams, index) => (
+              <div key={index}>
+                <div className="boxStyle">
+                  <img className="logo-soccer"
+                    src={teams.competitions[0].competitors[0].team.logo}
+                    alt=""
+                  />
+                  <img className="logo-soccer"
+                    src={teams.competitions[0].competitors[1].team.logo}
+                    alt=""
+                  />
+                </div>
+                <h2>{teams.shortName}</h2>
+              </div>
+            ))}
           </div>
         </div>
-        
-        );
-    }
+      );
+    };
       
 export default Soccer;
