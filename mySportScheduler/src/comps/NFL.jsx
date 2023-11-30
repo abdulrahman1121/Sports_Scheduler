@@ -1,8 +1,9 @@
 import React from 'react';
 import NFLpic from '../images/NFL.jpg'
 import { useState, useEffect } from "react";
-const NBA = () => {
-  const [nabInfo, setNbaInfoo] = useState([]);
+
+const NFL = () => {
+  const [nflInfo, setnflInfo] = useState([]);
   const divStyle = {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${NFLpic})`,
     backgroundSize: "cover",
@@ -24,20 +25,34 @@ const NBA = () => {
     left: "50%",
     transform: "translate(150%, -150%)",
   };
+
+  useEffect(() => {
+    const fetchNFL = async () => {
+      const res = await fetch(
+        "http://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
+      );
+      const data = await res.json();
+      if (data.events) {
+        setnflInfo(data.events);
+      }
+      console.log(data);
+    };
+    fetchNFL();
+  }, []);
   
 
   return (
     <div style={divStyle}>
       <h3>NFL</h3>
       <div className="container">
-        {nabInfo.map((teams, index) => (
+        {nflInfo.map((teams, index) => (
           <div key={index}>
             <div className="boxStyle">
-              <img className="logo-nba"
+              <img className="logo-nfl"
                 src={teams.competitions[0].competitors[0].team.logo}
                 alt=""
               />
-              <img className="logo-nba"
+              <img className="logo-nfl"
                 src={teams.competitions[0].competitors[1].team.logo}
                 alt=""
               />
@@ -50,7 +65,7 @@ const NBA = () => {
   );
 };
 
-export default NBA;
+export default NFL;
 
 {
   /* <div style={box2Style}>

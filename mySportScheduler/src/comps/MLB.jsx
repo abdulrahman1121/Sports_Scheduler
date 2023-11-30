@@ -1,7 +1,9 @@
 import React from 'react';
 import MLBpic from '../images/MLB.jpg';
+import { useState, useEffect } from "react";
 
 const MLB = () => {
+  const [mlbInfo, setmlbInfo] = useState([]);
     const divStyle = {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${MLBpic})`,
         backgroundSize: "cover",
@@ -39,21 +41,43 @@ const MLB = () => {
   };
   
   
-  
-      return (
-      <div style={divStyle}>
-          <h3>MLB</h3>
-          
-      <div style={boxStyle}>
-          <p>This is a div box</p>
-      
-      <div style={box2Style}>
-        <p>This is div for teams</p>
-          </div>
-        </div>
-      </div>
-      
+  useEffect(() => {
+    const fetchMLB = async () => {
+      const res = await fetch(
+        "http://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard"
       );
-  }
+      const data = await res.json();
+      if (data.events) {
+        setmlbInfo(data.events);
+      }
+      console.log(data);
+    };
+    fetchMLB();
+  }, []);
+
+  return (
+    <div style={divStyle}>
+      <h3>MLB</h3>
+      <div className="container">
+        {mlbInfo.map((teams, index) => (
+          <div key={index}>
+            <div className="boxStyle">
+              <img className="logo-mlb"
+                src={teams.competitions[0].competitors[0].team.logo}
+                alt=""
+              />
+              <img className="logo-mlb"
+                src={teams.competitions[0].competitors[1].team.logo}
+                alt=""
+              />
+            </div>
+            <h2>{teams.shortName}</h2>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 
 export default MLB;

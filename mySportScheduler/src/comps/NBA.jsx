@@ -2,7 +2,7 @@ import React from "react";
 import NBApic from "../images/NBA2.jpg";
 import { useState, useEffect } from "react";
 const NBA = () => {
-  const [nabInfo, setNbaInfoo] = useState([]);
+  const [nbaInfo, setNbaInfo] = useState([]);
   const divStyle = {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${NBApic})`,
     backgroundSize: "cover",
@@ -24,6 +24,7 @@ const NBA = () => {
     left: "50%",
     transform: "translate(150%, -150%)",
   };
+  
   useEffect(() => {
     const fetchNba = async () => {
       const res = await fetch(
@@ -31,7 +32,7 @@ const NBA = () => {
       );
       const data = await res.json();
       if (data.events) {
-        setNbaInfoo(data.events);
+        setNbaInfo(data.events);
       }
       console.log(data);
     };
@@ -42,7 +43,7 @@ const NBA = () => {
     <div style={divStyle}>
       <h3>NBA</h3>
       <div className="container">
-        {nabInfo.map((teams, index) => (
+        {nbaInfo.map((teams, index) => (
           <div key={index}>
             <div className="boxStyle">
               <img className="logo-nba"
