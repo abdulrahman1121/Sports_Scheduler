@@ -28,7 +28,7 @@ const NBA = () => {
 
   return (
     <div style={divStyle}>
-      <h3>NBA</h3>
+      <h3>NFL</h3>
       <div className="container">
         {nabInfo.map((teams, index) => (
           <div key={index}>
