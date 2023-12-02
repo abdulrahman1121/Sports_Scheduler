@@ -83,7 +83,14 @@ h3 {
 }
 
 .logo-nba {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
 }
+
+.logo-nfl{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+

@@ -10,6 +10,7 @@ const NFL = () => {
     backgroundPosition: "center",
     width: "100%",
     height: "900px",
+    fontSize: "12px"
   };
 
   const box2Style = {
