@@ -1,8 +1,11 @@
 import React from "react";
 import NBApic from "../images/NBA2.jpg";
 import { useState, useEffect } from "react";
+
 const NBA = () => {
   const [nbaInfo, setNbaInfo] = useState([]);
+  const[nbaTeam, setNbaTeam] = useState([]);
+
   const divStyle = {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${NBApic})`,
     backgroundSize: "cover",
@@ -37,6 +40,20 @@ const NBA = () => {
       console.log(data);
     };
     fetchNba();
+  }, []);
+
+  useEffect(() => {
+    const fetchTeam = async () => {
+      const res = await fetch(
+        'http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams'
+      );
+      const data = await res.json();
+      if(data.events){
+        setNbaTeam(data.evebts);
+      }
+      console.log(data)
+    };
+    fetchTeam();
   }, []);
 
   return (
