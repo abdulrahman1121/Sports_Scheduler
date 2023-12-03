@@ -76,8 +76,10 @@ h3 {
   gap: 0px; /* Reduce the gap between game boxes */
   background-color: #f3f3f3; /* Change this color as needed */
   padding: 10px; /* Reduce the padding */
-  max-width: 700px; /* Set the maximum width */
+  max-width: 800px; /* Set the maximum width */
   margin: 0 auto; /* Center the container horizontally */
+  overflow: auto;
+  height: 700px;
 }
 
 .boxStyle {
@@ -86,7 +88,7 @@ h3 {
   background-color: #fff; /* White background */
   padding: 0px; /* Reduce padding inside each game box */
   height: auto; /* Adjust height automatically based on content */
-  max-height: 100px; /* Set a maximum height for each game box */
+  max-height: 200px; /* Set a maximum height for each game box */
   overflow: hidden;
 }
 
@@ -134,3 +136,4 @@ h3 {
   height: 200px;
   object-fit: cover;
 }
+

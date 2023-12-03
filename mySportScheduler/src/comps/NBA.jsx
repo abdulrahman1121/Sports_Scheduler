@@ -1,5 +1,6 @@
 import React from "react";
 import NBApic from "../images/NBA2.jpg";
+import NBAlogo from "../images/nba-logo.jpg";
 import { useState, useEffect } from "react";
 
 const NBA = () => {
