@@ -22,7 +22,7 @@ li {
   align-items: center;
   min-height: 10vh;
 
-  background: rgb(0, 0, 0);
+  background:  #001F3F;
   border-radius: 3px;
 }
 
@@ -65,16 +65,18 @@ button {
 }
 
 h3 {
+  padding: 35px;
   color: white;
   text-align: center;
 }
+
 .container {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Reduce the gap between game boxes */
+  gap: 0px; /* Reduce the gap between game boxes */
   background-color: #f3f3f3; /* Change this color as needed */
   padding: 10px; /* Reduce the padding */
-  max-width: 600px; /* Set the maximum width */
+  max-width: 700px; /* Set the maximum width */
   margin: 0 auto; /* Center the container horizontally */
 }
 
@@ -82,9 +84,9 @@ h3 {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   background-color: #fff; /* White background */
-  padding: 10px; /* Reduce padding inside each game box */
+  padding: 0px; /* Reduce padding inside each game box */
   height: auto; /* Adjust height automatically based on content */
-  max-height: 120px; /* Set a maximum height for each game box */
+  max-height: 100px; /* Set a maximum height for each game box */
   overflow: hidden;
 }
 
