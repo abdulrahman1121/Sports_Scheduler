@@ -69,18 +69,37 @@ h3 {
   text-align: center;
 }
 .container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-  background-color: rgb(13, 121, 156);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f3f3f3; /* Change this color as needed */
+  padding: 20px;
 }
 
 .boxStyle {
-  width: 100%;
-  height: auto;
-  border-radius: 3px;
-  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  background-color: #fff; /* White background */
+  padding: 15px;
 }
+
+/* Optional: Style for specific elements inside the boxStyle */
+.boxStyle h2 {
+  margin-bottom: 10px;
+  color: #333; /* Darker text color */
+}
+
+.boxStyle p {
+  margin-bottom: 8px;
+  color: #666; /* Slightly lighter text color */
+}
+
+/* Add hover effect for better user interaction */
+.boxStyle:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 .logo-nba {
   width: 100px;
