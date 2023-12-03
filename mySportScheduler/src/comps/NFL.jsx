@@ -38,6 +38,7 @@ const NFL = () => {
       }
       console.log(data);
     };
+    
     fetchNFL();
   }, []);
   
