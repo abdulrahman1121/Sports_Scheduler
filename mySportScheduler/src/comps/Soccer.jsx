@@ -42,7 +42,7 @@ const Soccer = () => {
     useEffect(() => {
       const fetchSoccer = async () => {
         const res = await fetch(
-          "http://site.api.espn.com/apis/site/v2/sports/soccer/:league/scoreboard"
+          "http://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard"
         );
         const data = await res.json();
         if(data.events){
