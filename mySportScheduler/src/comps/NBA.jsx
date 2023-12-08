@@ -59,7 +59,10 @@ const NBA = () => {
 
   return (
     <div style={divStyle}>
-      <h3>NBA</h3>
+      <div className="NBA-logo">
+        <h3>NBA</h3>
+        <img src={NBAlogo} alt="" />
+      </div>
       <div className="container">
         {nbaInfo.map((teams, index) => (
           <div key={index}>

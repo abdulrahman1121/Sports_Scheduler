@@ -137,3 +137,9 @@ h3 {
   object-fit: cover;
 }
 
+.Nba-logo img{
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+
+}
