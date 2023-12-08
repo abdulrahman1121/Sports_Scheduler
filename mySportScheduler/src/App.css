@@ -137,9 +137,20 @@ h3 {
   object-fit: cover;
 }
 
-.Nba-logo img{
-  width: 200px;
-  height: 100px;
+.NBA-logo img{
+  width: 50px;
+  height: 50px;
   object-fit: cover;
+}
 
+.nfl-logo img{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.soccer-logo img{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
 }

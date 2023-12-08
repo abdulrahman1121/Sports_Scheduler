@@ -1,4 +1,5 @@
 import Soccerpic from '../images/Soccer.jpg';
+import SoccerLogo from '../images/soccer-logo.png';
 import {useState, useEffect} from 'react';
 
 const Soccer = () => {
@@ -58,7 +59,10 @@ const Soccer = () => {
     
         return (
           <div style={divStyle}>
+          <div className="soccer-logo">
           <h3>Soccer</h3>
+          <img src={SoccerLogo} alt="" />
+          </div>
           <div className="container">
             {soccerInfo.map((teams, index) => (
               <div key={index}>

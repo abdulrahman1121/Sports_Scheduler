@@ -1,5 +1,6 @@
 import React from 'react';
-import NFLpic from '../images/NFL.jpg'
+import NFLpic from '../images/NFL.jpg';
+import NFLlogo from '../images/nfl.png';
 import { useState, useEffect } from "react";
 
 const NFL = () => {
@@ -45,7 +46,10 @@ const NFL = () => {
 
   return (
     <div style={divStyle}>
+      <div className="nfl-logo">
       <h3>NFL</h3>
+      <img src={NFLlogo} alt="" />
+      </div>
       <div className="container">
         {nflInfo.map((teams, index) => (
           <div key={index}>
