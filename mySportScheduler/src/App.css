@@ -88,7 +88,7 @@ h3 {
   background-color: #fff; /* White background */
   padding: 0px; /* Reduce padding inside each game box */
   height: auto; /* Adjust height automatically based on content */
-  max-height: 200px; /* Set a maximum height for each game box */
+  max-height: 300px; /* Set a maximum height for each game box */
   overflow: hidden;
 }
 
