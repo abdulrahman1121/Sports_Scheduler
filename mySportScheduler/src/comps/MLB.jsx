@@ -1,5 +1,6 @@
 import React from 'react';
 import MLBpic from '../images/MLB.jpg';
+import MLBLogo from '../images/MLB.png'
 import { useState, useEffect } from "react";
 
 const MLB = () => {
@@ -57,7 +58,10 @@ const MLB = () => {
 
   return (
     <div style={divStyle}>
+      <div className="mlb-logo">
       <h3>MLB</h3>
+      <img src={MLBLogo} alt="" />
+      </div>
       <div className="container">
         {mlbInfo.map((teams, index) => (
           <div key={index}>
