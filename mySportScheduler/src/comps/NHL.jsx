@@ -1,5 +1,6 @@
 import React from 'react';
 import NHLpic from '../images/NHL.jpg'
+import NHLLogo from '../images/nhl.png'
 import {useEffect, useState} from 'react';
 
 const NHL = () => {
@@ -58,7 +59,10 @@ useEffect(() => {
 
 return (
   <div style={divStyle}>
+    <div className="nhl-logo">
     <h3>NHL</h3>
+    <img src={NHLLogo} alt="" />
+    </div>
     <div className="container">
       {nhlInfo.map((teams, index) => (
         <div key={index}>
