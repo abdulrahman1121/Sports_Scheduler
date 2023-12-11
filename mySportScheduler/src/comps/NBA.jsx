@@ -7,14 +7,6 @@ const NBA = () => {
   const [nbaInfo, setNbaInfo] = useState([]);
   const[nbaTeam, setNbaTeam] = useState([]);
 
-  const divStyle = {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${NBApic})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    width: "100%",
-    height: "900px",
-  };
-
   const box2Style = {
     width: "200px",
     height: "200px",
@@ -58,10 +50,13 @@ const NBA = () => {
   }, []);
 
   return (
-    <div style={divStyle}>
+    <div className="divStyle">
       <div className="NBA-logo">
         <h3>NBA</h3>
+        <div>
         <img src={NBAlogo} alt="" />
+        </div>
+      
       </div>
       <div className="container">
         {nbaInfo.map((teams, index) => (
