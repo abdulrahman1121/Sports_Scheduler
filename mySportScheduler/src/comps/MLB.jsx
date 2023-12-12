@@ -5,13 +5,13 @@ import { useState, useEffect } from "react";
 
 const MLB = () => {
   const [mlbInfo, setMlbInfo] = useState([]);
-    const divStyle = {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${MLBpic})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        width: "100%",
-        height: "900px",
-      };
+    // const divStyle = {
+    //     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${MLBpic})`,
+    //     backgroundSize: "cover",
+    //     backgroundPosition: "center",
+    //     width: "100%",
+    //     height: "900px",
+    //   };
 
     const boxStyle = {
         width: "400px",
@@ -57,10 +57,12 @@ const MLB = () => {
   }, []);
 
   return (
-    <div style={divStyle}>
+    <div className='divStyle3'>
       <div className="mlb-logo">
       <h3>MLB</h3>
+      <div>
       <img src={MLBLogo} alt="" />
+      </div>
       </div>
       <div className="container">
         {mlbInfo.map((teams, index) => (

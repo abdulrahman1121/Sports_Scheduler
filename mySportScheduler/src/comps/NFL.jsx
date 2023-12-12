@@ -5,14 +5,14 @@ import { useState, useEffect } from "react";
 
 const NFL = () => {
   const [nflInfo, setNflInfo] = useState([]);
-  const divStyle = {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${NFLpic})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    width: "100%",
-    height: "900px",
-    fontSize: "12px"
-  };
+  // const divStyle = {
+  //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${NFLpic})`,
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center",
+  //   width: "100%",
+  //   height: "900px",
+  //   fontSize: "12px"
+  // };
 
   const box2Style = {
     width: "200px",
@@ -45,10 +45,12 @@ const NFL = () => {
   
 
   return (
-    <div style={divStyle}>
+    <div className='divStyle2'>
       <div className="nfl-logo">
       <h3>NFL</h3>
+      <div>
       <img src={NFLlogo} alt="" />
+      </div>
       </div>
       <div className="container">
         {nflInfo.map((teams, index) => (
