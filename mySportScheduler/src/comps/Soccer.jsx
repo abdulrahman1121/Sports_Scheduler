@@ -4,13 +4,13 @@ import {useState, useEffect} from 'react';
 
 const Soccer = () => {
     const [soccerInfo, setSoccerInfo] = useState([]);
-    const divStyle = {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Soccerpic})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        width: "100%",
-        height: "900px",
-      };
+    // const divStyle = {
+    //     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Soccerpic})`,
+    //     backgroundSize: "cover",
+    //     backgroundPosition: "center",
+    //     width: "100%",
+    //     height: "900px",
+    //   };
       
     const boxStyle = {
         width: "400px",
@@ -57,13 +57,16 @@ const Soccer = () => {
     
     
     
-        return (
-          <div style={divStyle}>
-          <div className="soccer-logo">
-          <h3>Soccer</h3>
-          <img src={SoccerLogo} alt="" />
-          </div>
-          <div className="container">
+return (
+  <div className="divStyle4">
+    <div className="soccer-logo">
+      <h3>NBA</h3>
+      <div>
+      <img src={SoccerLogo} alt="" />
+      </div>
+    
+    </div>
+    <div className="container">
             {soccerInfo.map((teams, index) => (
               <div key={index}>
                 <div className="boxStyle">
