@@ -5,13 +5,13 @@ import {useEffect, useState} from 'react';
 
 const NHL = () => {
   const [nhlInfo, setNhlInfo] = useState([]);
-    const divStyle = {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${NHLpic})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        width: "100%",
-        height: "900px",
-      };
+    // const divStyle = {
+    //     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${NHLpic})`,
+    //     backgroundSize: "cover",
+    //     backgroundPosition: "center",
+    //     width: "100%",
+    //     height: "900px",
+    //   };
 
       
     const boxStyle = {
@@ -58,10 +58,12 @@ useEffect(() => {
 
 
 return (
-  <div style={divStyle}>
+  <div className='divStyle5'>
     <div className="nhl-logo">
     <h3>NHL</h3>
+    <div>
     <img src={NHLLogo} alt="" />
+    </div>
     </div>
     <div className="container">
       {nhlInfo.map((teams, index) => (
