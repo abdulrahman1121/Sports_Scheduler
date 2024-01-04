@@ -48,9 +48,10 @@ useEffect(() => {
       "http://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard"
     );
     const data = await res.json();
-    if (data.events) {
-      setNhlInfo(data.events);
-    }
+    // if (data.events) {
+    //   setNhlInfo(data.events);
+    // }
+    data.events ? setNhlInfo(data.events) : ''
     console.log(data);
   };
   fetchNHL();
