@@ -119,22 +119,25 @@ h3 {
   height: 900px;
 }
 
+
+
+.divStylee{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/MLB.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 900px;
+}
 .divStyle2{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/NFL.jpg');
-  background-size: "cover";
-  background-position: "center";
+  background-size: cover;
+  background-position: center;
   width: 100%;
   height: 900px;
-  font-size: 12px;
-};
+}
 
-.divStyle3{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/MLB.jpg');
-  background-size: "cover";
-  background-position: "center";
-  width: 100%;
-  height: 900px;
-};
+
+
 
 .divStyle4{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/Soccer.jpg');
@@ -143,6 +146,8 @@ h3 {
   width: "100%";
   height: "900px";
 };
+
+
 
 .divStyle5{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/NHL.jpg');
@@ -223,4 +228,12 @@ h3 {
   width: 50px;
   height: 50px;
   object-fit: cover;
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: red;
+  }
+  
 }

@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 const NBA = () => {
   const [nbaInfo, setNbaInfo] = useState([]);
-  const[nbaTeam, setNbaTeam] = useState([]);
+  const [nbaTeam, setNbaTeam] = useState([]);
 
   const box2Style = {
     width: "200px",
@@ -19,8 +19,9 @@ const NBA = () => {
     top: "75%",
     left: "50%",
     transform: "translate(150%, -150%)",
+    // "http://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard"
   };
-  
+
   useEffect(() => {
     const fetchNba = async () => {
       const res = await fetch(
@@ -38,13 +39,13 @@ const NBA = () => {
   useEffect(() => {
     const fetchTeam = async () => {
       const res = await fetch(
-        'http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams'
+        "http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams"
       );
       const data = await res.json();
-      if(data.events){
+      if (data.events) {
         setNbaTeam(data.evebts);
       }
-      console.log(data)
+      console.log(data);
     };
     fetchTeam();
   }, []);
@@ -54,19 +55,20 @@ const NBA = () => {
       <div className="NBA-logo">
         <h3>NBA</h3>
         <div>
-        <img src={NBAlogo} alt="" />
+          <img src={NBAlogo} alt="" />
         </div>
-      
       </div>
       <div className="container">
         {nbaInfo.map((teams, index) => (
           <div key={index}>
             <div className="boxStyle">
-              <img className="logo-nba"
+              <img
+                className="logo-nfl"
                 src={teams.competitions[0].competitors[1].team.logo}
                 alt=""
               />
-              <img className="logo-nba"
+              <img
+                className="logo-nfl"
                 src={teams.competitions[0].competitors[0].team.logo}
                 alt=""
               />
@@ -75,7 +77,9 @@ const NBA = () => {
           </div>
         ))}
       </div>
+
     </div>
+
   );
 };
 
