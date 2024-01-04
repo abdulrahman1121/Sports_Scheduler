@@ -47,21 +47,22 @@ const NFL = () => {
   return (
     <div className='divStyle2'>
       <div className="nfl-logo">
-      <h3>NFL</h3>
+        <h3>NFL</h3>
       <div>
       <img src={NFLlogo} alt="" />
       </div>
-      </div>
-      <div className="container">
+    </div>
+    
+    <div className="container">
         {nflInfo.map((teams, index) => (
           <div key={index}>
             <div className="boxStyle">
               <img className="logo-nfl"
-                src={teams.competitions[0].competitors[0].team.logo}
+                src={teams.competitions[0].competitors[1].team.logo}
                 alt=""
               />
               <img className="logo-nfl"
-                src={teams.competitions[0].competitors[1].team.logo}
+                src={teams.competitions[0].competitors[0].team.logo}
                 alt=""
               />
             </div>

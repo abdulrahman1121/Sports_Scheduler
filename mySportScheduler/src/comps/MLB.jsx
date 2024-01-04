@@ -69,11 +69,11 @@ const MLB = () => {
           <div key={index}>
             <div className="boxStyle">
               <img className="logo-mlb"
-                src={teams.competitions[0].competitors[0].team.logo}
+                src={teams.competitions[0].competitors[1].team.logo}
                 alt=""
               />
               <img className="logo-mlb"
-                src={teams.competitions[0].competitors[1].team.logo}
+                src={teams.competitions[0].competitors[0].team.logo}
                 alt=""
               />
             </div>

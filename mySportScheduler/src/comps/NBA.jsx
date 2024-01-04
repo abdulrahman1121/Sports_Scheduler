@@ -58,11 +58,11 @@ const NBA = () => {
         </div>
       
       </div>
-      <div className="container">
-        {nbaInfo.map((teams, index) => (
+    <div className="container">
+      {nbaInfo.map((teams, index) => (
           <div key={index}>
             <div className="boxStyle">
-              <img className="logo-nba"
+              <img className="logo-nba" 
                 src={teams.competitions[0].competitors[1].team.logo}
                 alt=""
               />

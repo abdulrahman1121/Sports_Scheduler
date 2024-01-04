@@ -60,22 +60,21 @@ const Soccer = () => {
 return (
   <div className="divStyle4">
     <div className="soccer-logo">
-      <h3>NBA</h3>
+      <h3>Premier League</h3>
       <div>
       <img src={SoccerLogo} alt="" />
       </div>
-    
     </div>
-    <div className="container">
+  <div className="container">
             {soccerInfo.map((teams, index) => (
               <div key={index}>
                 <div className="boxStyle">
                   <img className="logo-soccer"
-                    src={teams.competitions[0].competitors[0].team.logo}
+                    src={teams.competitions[0].competitors[1].team.logo}
                     alt=""
                   />
                   <img className="logo-soccer"
-                    src={teams.competitions[0].competitors[1].team.logo}
+                    src={teams.competitions[0].competitors[0].team.logo}
                     alt=""
                   />
                 </div>
