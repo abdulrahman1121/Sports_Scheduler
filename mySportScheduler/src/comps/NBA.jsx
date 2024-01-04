@@ -36,6 +36,19 @@ const NBA = () => {
     fetchNba();
   }, []);
 
+  useEffect(() => {
+    const fetchTeam = async () => {
+      const res = await fetch(
+        "http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams"
+      );
+      const data = await res.json();
+      if (data.events) {
+        setNbaTeam(data.evebts);
+      }
+      console.log(data);
+    };
+    fetchTeam();
+  }, []);
 
   return (
     <div className="divStyle">
