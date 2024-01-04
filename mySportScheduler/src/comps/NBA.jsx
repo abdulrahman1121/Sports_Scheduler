@@ -46,6 +46,7 @@ const NBA = () => {
         setNbaTeam(data.evebts);
       }
       console.log(data);
+      console.log(data);
     };
     fetchTeam();
   }, []);
