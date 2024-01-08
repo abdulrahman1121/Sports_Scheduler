@@ -6,21 +6,7 @@ const MLB = () => {
 
   const [MblTeam, setMblTeam] = useState([]);
 
-  const box2Style = {
-    width: "200px",
-    height: "200px",
-    backgroundColor: "orange",
-    border: "2px solid green",
-    borderRadius: "5px",
-    textAlign: "center",
-    paddingTop: "20px",
-    position: "absolute",
-    top: "75%",
-    left: "50%",
-    transform: "translate(150%, -150%)",
-    
-  };
-
+  
   useEffect(() => {
     const fetchNba = async () => {
       const res = await fetch(
@@ -38,8 +24,8 @@ const MLB = () => {
   
   return (
     <div className="divStylee">
-      <div className="NBA-logo">
-        <h3>NBA</h3>
+      <div className="MLB-logo">
+        <h3>MLB</h3>
         <div>
           <img src={MLBLogo} alt="" />
         </div>
@@ -49,12 +35,12 @@ const MLB = () => {
           <div key={index}>
             <div className="boxStyle">
               <img
-                className="logo-nfl"
+                className="logo-mlb"
                 src={teams.competitions[0].competitors[1].team.logo}
                 alt=""
               />
               <img
-                className="logo-nfl"
+                className="logo-mlb"
                 src={teams.competitions[0].competitors[0].team.logo}
                 alt=""
               />

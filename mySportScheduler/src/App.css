@@ -110,8 +110,11 @@ h3 {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-.divStyle{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/NBA2.jpg');
+.divStyle, 
+.divStylee,
+.divStyle2,
+.divStyle4,
+.divStyle5{
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -119,96 +122,57 @@ h3 {
   font-size: 12px;
 }
 
-
+.divStyle{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/NBA2.jpg');
+}
 
 .divStylee{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/MLB.jpg');
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 900px;
 }
 .divStyle2{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/NFL.jpg');
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 900px;
 }
-
-
 
 
 .divStyle4{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/Soccer.jpg');
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 900px;
-  font-size: 12px;
 };
 
 
 
 .divStyle5{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/NHL.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 900px;
-    font-size: 12px;
-  };
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/NHL.jpg');
+};
 
 
-.logo-nba {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-}
-
-.logo-nfl{
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-}
-
-.logo-mlb{
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
 
 .logo-nhl{
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
-}
+} 
 
-.logo-soccer{
+.nhl-logo h3{
+  color: black;
+}
+.logo-nfl,
+.logo-nba{
   width: 100px;
   height: 100px;
   object-fit: cover;
 }
 
-
-.NBA-logo{
+.logo-mlb,
+.logo-soccer{
   width: 200px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  margin: 0 30rem;
-
-}
-
-.NBA-logo h3{
-  font-size: 15px;
-}
-.NBA-logo img{
-  width: 50px;
-  height: 50px;
+  height: 200px;
   object-fit: cover;
 }
 
+.NBA-logo,
+.MLB-logo,
+.soccer-logo,
+.nhl-logo,
 .nfl-logo{
   width: 200px;
   display: grid;
@@ -217,29 +181,22 @@ h3 {
   margin: 0 30rem;
 }
 
-.nfl-logo img{
+.NBA-logo h3{
+  font-size: 15px;
+}
+
+.NBA-logo img,
+.nfl-logo img,
+.soccer-logo img,
+.nhl-logo img,
+.MLB-logo img{
   width: 50px;
   height: 50px;
   object-fit: cover;
 }
 
-.soccer-logo img{
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-}
 
-.nhl-logo img{
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-}
 
-.mlb-logo img{
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-}
 
 
 @media only screen and (max-width: 600px) {

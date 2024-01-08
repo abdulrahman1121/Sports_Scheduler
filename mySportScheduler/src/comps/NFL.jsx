@@ -2,23 +2,9 @@ import NFLpic from "../images/NFL.jpg";
 import NFLlogo from "../images/nfl.png";
 import React from "react";
 import { useState, useEffect } from "react";
-import MLBLogo from "../images/MLB.png";
+
 const NFL = () => {
   const [NflTeam, setNflTeam] = useState([]);
-
-  const box2Style = {
-    width: "200px",
-    height: "200px",
-    backgroundColor: "orange",
-    border: "2px solid green",
-    borderRadius: "5px",
-    textAlign: "center",
-    paddingTop: "20px",
-    position: "absolute",
-    top: "75%",
-    left: "50%",
-    transform: "translate(150%, -150%)",
-  };
 
   useEffect(() => {
     const fetchNba = async () => {

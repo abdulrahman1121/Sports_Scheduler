@@ -5,22 +5,8 @@ import { useState, useEffect } from "react";
 
 const NBA = () => {
   const [nbaInfo, setNbaInfo] = useState([]);
-  const [nbaTeam, setNbaTeam] = useState([]);
+  //const [nbaTeam, setNbaTeam] = useState([]);
 
-  const box2Style = {
-    width: "200px",
-    height: "200px",
-    backgroundColor: "orange",
-    border: "2px solid green",
-    borderRadius: "5px",
-    textAlign: "center",
-    paddingTop: "20px",
-    position: "absolute",
-    top: "75%",
-    left: "50%",
-    transform: "translate(150%, -150%)",
-    // "http://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard"
-  };
 
   useEffect(() => {
     const fetchNba = async () => {
@@ -36,19 +22,19 @@ const NBA = () => {
     fetchNba();
   }, []);
 
-  useEffect(() => {
-    const fetchTeam = async () => {
-      const res = await fetch(
-        "http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams"
-      );
-      const data = await res.json();
-      if (data.events) {
-        setNbaTeam(data.evebts);
-      }
-      console.log(data);
-    };
-    fetchTeam();
-  }, []);
+  // useEffect(() => {
+  //   const fetchTeam = async () => {
+  //     const res = await fetch(
+  //       "http://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams"
+  //     );
+  //     const data = await res.json();
+  //     if (data.events) {
+  //       setNbaTeam(data.evebts);
+  //     }
+  //     console.log(data);
+  //   };
+  //   fetchTeam();
+  // }, []);
 
   return (
     <div className="divStyle">
@@ -62,12 +48,12 @@ const NBA = () => {
       {nbaInfo.map((teams, index) => (
           <div key={index}>
             <div className="boxStyle"> 
-              <img className="logo-nfl"
+              <img className="logo-nba"
                 src={teams.competitions[0].competitors[1].team.logo}
                 alt=""
               />
               <img
-                className="logo-nfl"
+                className="logo-nba"
                 src={teams.competitions[0].competitors[0].team.logo}
                 alt=""
               />
